@@ -1,0 +1,13 @@
+body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.table {
+    width: 75vw;
+}
+.btn {
+    margin: 20px;
+}
