@@ -1,6 +1,7 @@
 from faker import Faker
 
 
+# This function emulates access to a more typical datasource, like a database
 def _generate_user(index):
     fake = Faker()
     Faker.seed(index)  # this is inefficient, but that's good because it delays the response significantly :)
@@ -9,7 +10,7 @@ def _generate_user(index):
     return {
         'id': index + 1,
         'lastname': last_name,
-        'email': f"{first_name.lower()}.{last_name.lower()}@{fake.domain_name()}"
+        'email': f'{first_name.lower()}.{last_name.lower()}@{fake.domain_name()}'
     }
 
 

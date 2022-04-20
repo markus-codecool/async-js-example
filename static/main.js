@@ -6,11 +6,11 @@ function populateTable() {
     let table = document.getElementById('data-table');
     table.innerHTML = '';
 
-    // let userDataPromise = getMockData();
-    let userDataPromise = getUserData();
+    let userDataPromise = getMockData(); // you could mock your data
+    userDataPromise = getUserData(); // or fetch it from the server
     console.log(userDataPromise);
 
-    // populate table
+    // populate table   
     userDataPromise.then(userData => {
         console.log('got user Data', userData)
         for (let userEntry of userData) {
